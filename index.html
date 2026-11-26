@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Rutas Secretas - Descubre y Comparte</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet CSS & JS para el mapa interactivo real -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <style>
+    :root {
+      --primary-olive: #384a26;
+      --primary-olive-dark: #28361a;
+      --accent-amber: #f59e0b;
+      --bg-card-gray: #ebebeb;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #e5e7eb;
+      color: #111827;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    h1, h2, .brand-font {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .leaflet-container {
+      font-family: 'Inter', sans-serif !important;
+      z-index: 10;
+    }
+    .leaflet-control-attribution {
+      display: none !important;
+    }
+
+    .custom-pin-wrapper {
+      background: transparent;
+      border: none;
+    }
+
+    .custom-tooltip {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 1.15;
+      color: #1f2937;
+      text-shadow: 0 1px 2px rgba(255,255,255,0.95), 0 -1px 2px rgba(255,255,255,0.95), 1px 0 2px rgba(255,255,255,0.95), -1px 0 2px rgba(255,255,255,0.95);
+      padding: 0 !important;
+    }
+    .custom-tooltip::before {
+      display: none !important;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to
